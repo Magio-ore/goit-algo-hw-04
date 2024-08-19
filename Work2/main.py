@@ -21,8 +21,11 @@ def get_cats_info(path):
                 else:
                     print(f"Рядок {parts} містить більше ніж 3 частини")
         
-        print(cats_info)
+        return cats_info
     else:
         print("Файл не знайдено або він пошкоджений!")
+        return None
 
-get_cats_info(path)
+# Виклик функції
+cats_info = get_cats_info(path)
+print(cats_info)
