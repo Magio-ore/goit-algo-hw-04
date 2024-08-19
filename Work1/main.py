@@ -27,8 +27,11 @@ def total_salary(path):
         else:
             average = 0  # Якщо немає жодного рядка з даними після коми
 
-        print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}")
+        return total, average
     else:
         print("Файл не знайдено!")
+        return None, None
 
-total_salary(path)
+# Виклик функції
+total, average = total_salary(path)
+print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}")
